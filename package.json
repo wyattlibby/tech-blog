@@ -1,0 +1,19 @@
+{
+  "name": "tech-blog",
+  "version": "1.0.0",
+  "description": "tech blog",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wyattlibby/tech-blog.git"
+  },
+  "author": "Brad Libby",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wyattlibby/tech-blog/issues"
+  },
+  "homepage": "https://github.com/wyattlibby/tech-blog#readme"
+}
