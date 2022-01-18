@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/wyattlibby/tech-blog/issues"
   },
-  "homepage": "https://github.com/wyattlibby/tech-blog#readme"
+  "homepage": "https://github.com/wyattlibby/tech-blog#readme",
+  "dependencies": {
+    "connect-session-sequelize": "^7.1.2",
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "express-session": "^1.17.2",
+    "sequelize": "^6.13.0"
+  }
 }
