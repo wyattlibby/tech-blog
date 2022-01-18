@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/wyattlibby/tech-blog#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.2",
     "dotenv": "^14.2.0",
     "express": "^4.17.2",
