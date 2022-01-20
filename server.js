@@ -5,7 +5,7 @@ require("dotenv").config();
 const sequelize = require("./config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 const app = express();
-const port = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001;
 const sess = {
     secret: "i have a secret",
     cookie: {},
@@ -23,5 +23,8 @@ app.set("view engine","handlebars");
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(express.static("public"));
-
+app.use(require("./controllers"));
+sequelize.sync({force:false}).then(() => {
+    app.listen(PORT, () => console.log(`now listening on ${PORT}`));
+});
 
