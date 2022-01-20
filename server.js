@@ -1,7 +1,6 @@
 const express = require("express");
 const session = require("express-session");
 const express_handlebars = require("express-handlebars");
-const path = require("path");
 require("dotenv").config();
 const sequelize = require("./config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
@@ -16,4 +15,13 @@ const sess = {
         db: sequelize
     })
 };
+
+app.use(session(sess));
+const handlebars = express_handlebars.create();
+app.engine("handlebars", handlebars.engine);
+app.set("view engine","handlebars");
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
+app.use(express.static("public"));
+
 
