@@ -12,12 +12,13 @@ const sess = {
     resave: false,
     saveUninitialized: true,
     store: new SequelizeStore({
-        db: sequelize
+    db: sequelize
     })
 };
 
 app.use(session(sess));
-const handlebars = express_handlebars.create();
+const helpers = require("./utils/helpers");
+const handlebars = express_handlebars.create({helpers});
 app.engine("handlebars", handlebars.engine);
 app.set("view engine","handlebars");
 app.use(express.json());
